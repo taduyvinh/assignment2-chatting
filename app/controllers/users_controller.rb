@@ -13,8 +13,8 @@ class UsersController < ApplicationController
       redirect_to root_path
       flash[:success]="Account created successfully"
     else
-      render 'new'
       flash[:error]="#{@users.errors.full_messages.to_sentence}"
+      render 'new'
     end
   end
 
