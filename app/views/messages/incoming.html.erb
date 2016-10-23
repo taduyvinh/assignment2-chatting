@@ -1,0 +1,28 @@
+<div class='container'>
+	<h1>Incoming messages</h1>
+
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>User</th>
+	      <th>Subject</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% @incoming_messages.each do |f| %>
+	    	<% if f.read == false %>
+		    	<tr>
+			      <td><strong><%= f.sender %></strong></td>
+			      <td><strong><%= f.subject %></strong></td>
+			      <td><%= link_to "Read", f %></td>
+	      <% else %>
+			      <td><%= f.sender %></td>
+			      <td><%= f.sender %></td>
+			      <td> Message read </td>
+			    </tr>  
+		    <% end %>
+		    	
+	    	<% end %>
+	  </tbody>
+	</table>
+</div>

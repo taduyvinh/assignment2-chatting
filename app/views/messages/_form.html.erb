@@ -1,0 +1,28 @@
+<div class="container">
+
+      
+      
+
+  <%= form_for Message.new, url: message_create_path do |f| %>
+    <%= f.select(:recipient_id, {}, {prompt: "Send message to"}, {:class => 'form-control'}) do%>
+      <% @recipient.each do |g| %>
+         <%= content_tag(:option, "#{g.name} - #{g.email})", value: g.id) %>
+      <% end%>
+    <% end %>
+
+    <%= f.hidden_field :sender_id, :value => current_user.id %>   
+ 
+
+    <div class="form-group">
+      <%= f.label :subject %>
+      <%= f.text_field :subject, placeholder: "Title", class: 'form-control' %>
+    </div>  
+
+      
+    <div class="form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: 'form-control', rows:'10' %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>

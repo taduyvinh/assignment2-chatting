@@ -1,0 +1,13 @@
+
+<div class="container">
+<div class="card card-block">
+   <h4 class="card-title ">Sender: <%= @message.sender.name%></h4>
+   <hr>
+   <h4 class="card-title">Subject: <%= @message.subject %></h5>
+   <hr>
+   <p class="card-text">Time: <%= @message.created_at.strftime(" %H:%M%p, %B %d %Y ") %></p>
+   <hr>
+   <p class="card-text">Content:</p>
+   <p class="card-text"><%= @message.body %></p>
+</div>
+</div>

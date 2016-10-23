@@ -1,0 +1,26 @@
+<div class='container'>
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>Recipient</th>
+	      <th>Subject</th>
+	      <th>Read?</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+			<% @sent_messages.each do |f| %>
+	    <tr>
+	      <td><%= f.recipient %></td>
+	      <td><%= f.subject %></td>
+	      <td>
+		    	<% if  f.read == true %>
+		    		<%= f.read_at.strftime(" %H:%M%p, %B %d %Y ") %>
+		      <% else %>
+		      	Unread
+		      <% end %>	      	
+	      </td>
+	    </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+</div>
