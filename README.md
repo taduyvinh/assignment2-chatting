@@ -1,12 +1,12 @@
-# Homework 2 - *Name of App*
+# Homework 2 - *Chatting Website*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
+Chatting Website is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
 
-Submitted by: **Your Name Here**
+Submitted by: Vinh
 
-Time spent: **X** hours
+Time spent: 17 hours
 
-URL: **Insert your Heroku URL here**
+URL: https://vinh-assignment2.herokuapp.com/
 
 ## User Stories
 
